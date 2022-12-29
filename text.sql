@@ -1,0 +1,1 @@
+INSERT INTO Posts (name, age, sex, contact, createdAt, updatedAt) VALUES("김에정수", "25", "남자", "010-0000-9999", "2022-12-29", "2022-12-29")

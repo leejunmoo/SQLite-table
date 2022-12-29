@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고객정보관리</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- 제이쿼리 -->
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+ <div class="wrap">
+  <h1>고객정보관리</h1>
+  <form action="/serach" method="post">
+    <input type="text" name="serach" id="serach" placeholder="고객명 입력">
+    <button type="submit">검색</button>
+  </form>
+  <!-- 테이블형태 게시판 -->
+  <table class="userinfo-list-box">
+    <h2>게시물 수: <%= posts.length %> </h2>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>age</th>
+        <th>sex</th>
+        <th>contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% posts.forEach(post => {%>
+        <tr>
+          <td><%= post.id %></td>
+          <td><%= post.name %></td>
+          <td><%= post.age %></td>
+          <td><%= post.sex %></td>
+          <td><%= post.contact %></td>
+          <td>
+            <form action="/delete/<%=post.id%>" method="post">
+            <button type="submit">삭제</button>
+            </form>
+          </td>
+        </tr><%}) %> 
+    </tbody>
+  </table>
+
+
+  <!-- 정보 입력 박스 -->
+  <div class="userinfo-table">
+    <form action="/create" method="post">
+      <p class="namebox">
+        <label for="nametext">이름: <input type="text" name="name" id="name" placeholder="이름" required></label>
+      </p>
+      
+      <p class="agebox">
+        <label for="agetext">나이: 
+          <input type="text" name="age" id="age" placeholder="나이" required >
+        </label>
+      </p>
+      <p class="sexbox">
+        <label for="sextext">
+          <input type="radio" name="sex" id="sex" value="남자">남자
+          <input type="radio" name="sex" id="sex" value="여자">여자
+        </label>
+      </p>
+      <p class="contactbox">
+        <label for="contacttext">연락처: 
+          <input type="tel" name="phone" id="phone" placeholder="연락처" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}" maxlength="13" oninput="hypenTel(this)" required>
+        </label>
+      </p>
+      <button type="submit">등록</button>
+    </form>
+  </div>
+ </div>
+
+
+
+
+ <!-- 하이픈 자동생성 -->
+ <script>
+  const hypenTel = (target) => {
+ target.value = target.value
+   .replace(/[^0-9]/g, '')
+   .replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
+  }
+
+  /* 삭제 확인창 */
+  $('.wrap .userinfo-list-box form button').on('click', function(){
+    if(confirm('삭제하시겠습니까?')) {
+      alert('삭제되었습니다.')
+    } else {
+      alert('취소되었습니다.');
+      return false
+    }
+  })
+
+  $('.wrap #serach').on('click', function(){
+    location.href('pages/serach.ejs');
+  })
+</script>
+</body>
+</html>
