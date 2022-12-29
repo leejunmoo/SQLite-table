@@ -3,7 +3,7 @@
 ### 테이블형태 게시판 제작
 ### 서비스플랫폼 배포완료. 백엔드 웹앱기준 제작
 (By 이준무)
-#### 서비스주소:
+#### 서비스주소: https://port-0-sqlite-table-fyyf25lboho2ya.gksl2.cloudtype.app/
 
 
 # 제작 목표✒
