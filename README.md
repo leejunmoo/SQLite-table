@@ -6,10 +6,10 @@
 #### 서비스주소:
 
 
-#제작 목표✒
+# 제작 목표✒
 #### 1.DB와 서버를 다루는 기초적인 문법 숙달
 
-#사이트 메인 페이지
+# 사이트 메인 페이지
 ![image](https://user-images.githubusercontent.com/113665599/209920820-1f140cd1-99b1-4c2e-b00a-fac7604bbaec.png)
 
 
