@@ -14,13 +14,13 @@ const Posts = sequelize.define('Posts', {
     // create(속성 정의)
     name: {
         type:DataTypes.STRING, // 문자형
-        allowNull: false,
-        defaultValue:'' // NOT NULL (빈값허용X)
+        allowNull: false, // NOT NULL (빈값허용X)
+        defaultValue:'' // 오류 수정?....필수입력값인데 기본값이없어서 자꾸오류났었음
     },
     age: {
         type:DataTypes.INTEGER,
         allowNull: false,
-        defaultValue:''
+        defaultValue:'' 
     },
     sex: {
         type:DataTypes.STRING,
