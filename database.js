@@ -14,19 +14,24 @@ const Posts = sequelize.define('Posts', {
     // create(속성 정의)
     name: {
         type:DataTypes.STRING, // 문자형
-        allowNull: false, // NOT NULL (빈값허용X)
+        allowNull: false,
+        defaultValue:'' // NOT NULL (빈값허용X)
     },
     age: {
         type:DataTypes.INTEGER,
         allowNull: false,
+        defaultValue:''
     },
     sex: {
         type:DataTypes.STRING,
         allowNull: false,
+        defaultValue:''
     },
     contact: {
         type:DataTypes.STRING,
-    },
+        defaultValue:''
+
+    }
 
 })
 

@@ -40,15 +40,15 @@ app.get('/about', function(req, res) {
 // 글쓰기 요청
 app.post('/create', async function(req, res){
   // res.send('응답받음' + req.body.post )
-  let post = req.body.post;
+  let post = req.body.name;
   let age = req.body.age;
   let sex = req.body.sex;
   let contact = req.body.phone;
   // 테이블명.create({칼럼이름: 값})
-  const newPost = await Posts.create({name: post})
-  const newAge = await Posts.create({age: age})
-  const newSex = await Posts.create({sex: sex})
-  const newContact = await Posts.create({contact: phone})
+  const newPost = await Posts.create({name: post, age: age, sex: sex, contact: contact})
+  // const newAge = await Posts.create({age: age})
+  // const newSex = await Posts.create({sex: sex})
+  
   
   res.redirect('/');
 })
