@@ -1,6 +1,10 @@
 /* style.css */
 a {
-  color: red;
+  color: black;
+}
+
+nav a:hover {
+  color: blue;
 }
 
 .wrap {
@@ -13,6 +17,11 @@ a {
   height: 24px;
 }
 
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 .wrap .userinfo-list-box h2 {
   margin-top: 50px;
   margin-bottom: 30px;
@@ -20,7 +29,15 @@ a {
 /* 테이블 */
 
 .wrap .userinfo-list-box {
-  border: 1px solid black;
+  width: 100%;
+  border-top: 1px solid #444;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.wrap table th, .wrap table td {
+  border-bottom: 1px solid #444;
+  padding: 10px;
 }
 
 .wrap table tr {

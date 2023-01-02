@@ -15,6 +15,7 @@
 </head>
 <body>
  <div class="wrap">
+  <%- include('./nav') %> 
   <h1>고객정보관리</h1>
   <form action="/serach" method="post">
     <input type="text" name="serach" id="serach" placeholder="고객명 입력">
@@ -30,6 +31,7 @@
         <th>age</th>
         <th>sex</th>
         <th>contact</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>

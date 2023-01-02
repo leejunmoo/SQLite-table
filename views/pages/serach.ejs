@@ -15,6 +15,7 @@
 </head>
 <body>
  <div class="wrap">
+  <%- include('./nav') %> 
   <h1>고객정보관리</h1>
   <form action="/serach" method="post">
     <input type="text" name="serach" id="serach" placeholder="고객명 입력">
@@ -30,21 +31,29 @@
         <th>age</th>
         <th>sex</th>
         <th>contact</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
+      <% sch.forEach(post => {%>
         <tr>
-          <td><%= sch.id %></td>
-          <td><%= sch.name %></td>
-          <td><%= sch.age %></td>
-          <td><%= sch.sex %></td>
-          <td><%= sch.contact %></td>
+          <td><%= post.id %></td>
+          <td><%= post.name %></td>
+          <td><%= post.age %></td>
+          <td><%= post.sex %></td>
+          <td><%= post.contact %></td>
           <td>
             <form action="/delete/<%=sch.id%>" method="post">
             <button type="submit">삭제</button>
             </form>
           </td>
-        </tr>
+        </tr><%}) %> 
+        <% if(sch !== post.name ) {%>
+          <% console.log(post.name) %> 
+            <p>요청한 고객을 찾을 수 없습니다.</p>
+          <%} else {%>
+            
+            <%} %> 
     </tbody>
   </table>
 

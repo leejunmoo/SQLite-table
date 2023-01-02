@@ -23,7 +23,7 @@ app.use(express.static("public"));
 
 // home
 app.get('/', async function(요청, 응답){
-  
+  // 내림차순
   const posts = await Posts.findAll({
     order:[["id", "DESC"]]
   });
@@ -67,12 +67,13 @@ app.post('/delete/:id', async function(req, res){
 
 // 검색 요청
 app.post('/serach', async function(req,res){
-  let sch = await Posts.findOne({
+  let sch = await Posts.findAll({
     
     where: {
       name: req.body.serach
     }
   })
+  
   const posts = await Posts.findAll({
     order:[["id", "DESC"]]
   });
