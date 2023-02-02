@@ -1,4 +1,4 @@
-# 과제물-게시판📋 제작 
+게시판📋 제작 
 
 ### 테이블형태 게시판 제작
 ### 서비스플랫폼 배포완료. 백엔드 웹앱기준 제작
@@ -7,7 +7,12 @@
 
 
 # 제작 목표✒
-#### 1.DB와 서버를 다루는 기초적인 문법 숙달
+#### 1.DB와 서버를 다루는 기초적인 문법 숙달    
+##### 📌개발환경 : 운영체제 윈도우10 chrome
+##### 📌사용 코드에디터 : vs code
+##### 📌개발언어: HTML, CSS, JavaScript 
+##### 📌사용 모듈: node.js, express, sqlite3, sequelize, cookie-parse 활용 
+
 
 # 사이트 메인 페이지
 ![image](https://user-images.githubusercontent.com/113665599/209920820-1f140cd1-99b1-4c2e-b00a-fac7604bbaec.png)
