@@ -7,11 +7,11 @@
 
 
 # 제작 목표✒
-#### 1.DB와 서버를 다루는 기초적인 문법 숙달    
+#### 1.Sqlite3 와 서버를 다루는 기초적인 문법 숙달    
 ##### 📌개발환경 : 운영체제 윈도우10 chrome
 ##### 📌사용 코드에디터 : vs code
 ##### 📌개발언어: HTML, CSS, JavaScript 
-##### 📌사용 모듈: node.js, express, sqlite3, sequelize, cookie-parse 활용 
+##### 📌사용 모듈: node.js, ejs문법, sqlite3, sequelize 활용 
 
 
 # 사이트 메인 페이지
