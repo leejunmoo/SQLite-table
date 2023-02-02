@@ -15,12 +15,13 @@
 
 
 # 사이트 메인 페이지
-![image](https://user-images.githubusercontent.com/113665599/209920820-1f140cd1-99b1-4c2e-b00a-fac7604bbaec.png)
+![image](https://user-images.githubusercontent.com/113665599/216203988-5f38469b-5830-4867-90a2-278eb3404c05.png)
+
 
 
 # 사이트 제작 포인트✅
 #### 1. SQLite 및 node.js 모듈 sequlize 사용
-#### 2. 서비스플랫폼 배포를 위한 DB에 Data 등록 및 삭제 기능 추가
+#### 2. 서비스플랫폼 배포를 위한 sqlite파일에 Data 등록 및 삭제 기능 추가
 #### 3. 검색기능 추가
 #### 4. 가독성 및 정보찾기를 위한 내림차순 정렬
 
